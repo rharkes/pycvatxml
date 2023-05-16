@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycvatxml"
+version = "0.0.1"
+description = "Read cvat annotation files"
+readme = "README.md"
+authors = [{ name = "Rolf Harkes", email = "r.harkes@nki.nl" }]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["annotations", "cvat", "xml"]
+dependencies = [
+    "lxml >= 4.9",
+]
+requires-python = ">=3.9"
+[project.optional-dependencies]
+dev = ["black", "bumpver", "pytest", "mypy", "setuptools", "build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/rharkes/pycvatxml"
+
+[tool.bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
+"src/pycvatxml/version.py" = [
+    "{version}"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+pythonpath = [
+  './src'
+]
+
+[tool.mypy]
+python_version = '3.11'
+mypy_path = "src"
+packages = "pycvatxml"
+strict = true
+
+[[tool.mypy.overrides]]
+module = "lxml.*"
+ignore_missing_imports  = true

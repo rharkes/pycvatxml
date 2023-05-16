@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>164999</id>
+      <size>1</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2023-05-16 10:07:37.533760+00:00</created>
+      <updated>2023-05-16 11:09:14.491372+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>0</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>164999</id>
+          <start>0</start>
+          <stop>0</stop>
+          <url>https://app.cvat.ai/api/jobs/164999</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>rharkes</username>
+        <email>r.harkes@nki.nl</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>Tumor</name>
+          <color>#ff007c</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>Stroma</name>
+          <color>#fafa37</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>Background</name>
+          <color>#000000</color>
+          <type>any</type>
+          <attributes>
+            <attribute>
+              <name>it is silly</name>
+              <mutable>False</mutable>
+              <input_type>radio</input_type>
+              <default_value>very</default_value>
+              <values>very
+a bit
+not at all</values>
+            </attribute>
+            <attribute>
+              <name>Nice</name>
+              <mutable>True</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>true</default_value>
+              <values>true</values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2023-05-16 11:09:52.585928+00:00</dumped>
+  </meta>
+  <image id="0" name="exportroi.jpg" width="5376" height="5052">
+    <polygon label="Stroma" source="manual" occluded="0" points="789.79,3280.26;1948.15,4200.14;2084.43,3616.09;1305.70,2920.10;911.47,2973.64;911.47,2973.64" z_order="0">
+    </polygon>
+    <ellipse label="Background" source="manual" occluded="0" cx="2097.61" cy="3176.73" rx="119.70" ry="56.33" z_order="0">
+      <attribute name="Nice">true</attribute>
+      <attribute name="it is silly">not at all</attribute>
+    </ellipse>
+    <polygon label="Tumor" source="manual" occluded="0" points="2725.03,1872.32;2222.75,2211.07;1895.68,2491.41;1959.93,2853.52;2584.86,2946.97;2666.63,2526.45" z_order="0">
+    </polygon>
+    <box label="Stroma" source="manual" occluded="0" xtl="2468.05" ytl="3723.75" xbr="3326.60" ybr="4237.71" z_order="0">
+    </box>
+    <polygon label="Background" source="manual" occluded="0" points="2876.88,4973.61;2514.77,4880.16;2514.77,4950.25;2701.67,4996.97" z_order="0">
+      <attribute name="Nice">false</attribute>
+      <attribute name="it is silly">very</attribute>
+    </polygon>
+  </image>
+</annotations>
