@@ -30,11 +30,16 @@ class Annotationtypes(Enum):
     def getfields(self) -> List[str]:
         if self == Annotationtypes.ELLIPSE:
             return ["cx", "cy", "rx", "ry"]
-        if self in [Annotationtypes.POLYGON, Annotationtypes.POINTS, Annotationtypes.POLYLINE]:
+        if self in [
+            Annotationtypes.POLYGON,
+            Annotationtypes.POINTS,
+            Annotationtypes.POLYLINE,
+        ]:
             return ["points"]
         if self == Annotationtypes.RECTANGLE:
             return ["xtl", "ytl", "xbr", "ybr"]
         return [""]
+
 
 class Annotation:
     def __init__(self) -> None:
