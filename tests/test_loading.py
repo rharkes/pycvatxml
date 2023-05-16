@@ -19,3 +19,4 @@ def testloading(files):
     cvx = CvatXml()
     for file in files:
         cvx.load(file)
+        assert cvx.valid

@@ -37,6 +37,7 @@ class CvatXml:
             self._loadxml(pth)
         else:
             self.log.error(f"Invalid extension {pth.suffix}")
+        self.valid = True
 
     def _loadxml(self, pth: Union[str, os.PathLike[Any]]) -> None:
         self.tree = etree.parse(pth)
