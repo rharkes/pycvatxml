@@ -8,6 +8,7 @@ def files():
     return [
         Path(
             Path.cwd(),
+            "tests",
             "testdata",
             "annotations.xml",
         ),
