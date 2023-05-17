@@ -2,7 +2,9 @@
 
 """
 from lxml.etree import _Element
+import geojson as gs
 
+from pycvatxml.MetaData import MetaData
 from pycvatxml.Annotation import Annotation
 
 

@@ -5,13 +5,14 @@ from pycvatxml import CvatXml
 
 @pytest.fixture
 def files():
+    root = Path(
+        Path.cwd(),
+        "tests",
+        "testdata",
+    )
     return [
-        Path(
-            Path.cwd(),
-            "tests",
-            "testdata",
-            "annotations.xml",
-        ),
+        Path(root, "annotations.xml"),
+        Path(root, "testset.zip"),
     ]
 
 
